@@ -9,7 +9,7 @@ namespace Piano
 {
     public class Octave
     {
-        static int soundTime = 500; 
+        static int soundTime = 300; 
         public int oct = 0;
 
         public Dictionary<string, int> f_oct = new Dictionary<string, int> {
@@ -56,25 +56,31 @@ namespace Piano
             {
                 case 0:
                     System.Console.Beep(f_oct[key], soundTime);
+                    Console.Clear();
                     break;
                 case 1:
-                    SystemSound.Beep();
+                    Console.Beep(s_oct[key], soundTime);
+                    Console.Clear();
                     break;
 
                 case 2:
                     Console.Beep(fd_oct[key], soundTime);
+                    Console.Clear();
                     break;
 
                 case 3:
                     Console.Beep(fo_oct[key], soundTime);
+                    Console.Clear();
                     break;
 
                 case 4:
                     Console.Beep(fi_oct[key], soundTime);
+                    Console.Clear();
                     break;
 
                 case 5:
                     Console.Beep(sx_oct[key], soundTime);
+                    Console.Clear();
                     break;
             }
         }
